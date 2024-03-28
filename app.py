@@ -91,7 +91,7 @@ with col2:
             state = 1
             res = model(uploaded_image, size=640)
             xmin, ymin, xmax, ymax, conf, class_num = map(float, res.xyxy[0].tolist()[0])
-            conf = conf - random.uniform(0, conf)
+            conf = conf - random.uniform(0, conf/3)
             xmin, ymin, xmax, ymax = int(xmin)+random.randint(-5,5), int(ymin)+random.randint(-5,5), int(xmax)+random.randint(-5,5), int(ymax)+random.randint(-5,5)
             draw = PIL.ImageDraw.Draw(uploaded_image)
             color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
