@@ -1,19 +1,23 @@
-import ultralytics
-import torch
+# import ultralytics
+# import torch
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-print(device)
+# device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+# print(device)
+import random
+
+print(random.randint(-10,10))
+
 
 # model = ultralytics.YOLO("weights/yolov8.pt")
 # model.predict(source="images/img1.jpg", conf=0.1, save=True, save_txt=True, save_conf=True)[0]
 
 
 # model = torch.hub.load('WongKinYiu/yolov7', 'custom', 'weights/yolov7.pt', trust_repo=True, force_reload=True)
-model = torch.hub.load('WongKinYiu/yolov7', 'custom', 'weights/yolov7.pt', trust_repo=True)
+# model = torch.hub.load('WongKinYiu/yolov7', 'custom', 'weights/yolov7.pt', trust_repo=True)
 
-model.conf = 0.40
-results = model("videos/vid1.mp4", size=640)
-print(results.xyxy[0])
+# model.conf = 0.40
+# results = model("videos/vid1.mp4", size=640)
+# print(results.xyxy[0])
 # results.save()
 # results.crop(save=True)
 # results.show()
